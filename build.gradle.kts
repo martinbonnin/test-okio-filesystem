@@ -4,11 +4,12 @@ plugins {
 
 kotlin {
   jvm()
-  
+  macosArm64()
+
   sourceSets {
-    getByName("jvmTest") {
+    getByName("commonMain") {
       dependencies {
-        implementation(kotlin("test"))
+        implementation("com.squareup.okio:okio:3.8.0")
       }
     }
   }
